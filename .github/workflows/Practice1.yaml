@@ -1,0 +1,13 @@
+name: Triggering Event
+
+on:
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Run script
+              run: |
+                echo "This is a first workflow"
+                cat "$GITHUB_EVENT_PATH"
